@@ -23,6 +23,9 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: 'client/index.html'
+    }),
+    new webpack.DefinePlugin({
+      'process.end.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
     })
   ]
 };
